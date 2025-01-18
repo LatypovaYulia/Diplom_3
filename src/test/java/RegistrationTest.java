@@ -53,6 +53,7 @@ public class RegistrationTest extends BaseTest {
         registerPage.setPasswordField(userData.getPassword());
         registerPage.clickRegisterButtonOnRegisterPage();
 
+        webdriver().shouldHave(url(LoginPage.LOGIN_PAGE_URL));
         softly.assertThat(url())
                 .as("Текущий URL должен соответствовать странице логина")
                 .isEqualTo(LoginPage.LOGIN_PAGE_URL);

@@ -15,7 +15,7 @@ import pageobject.ProfilePage;
 
 import static com.codeborne.selenide.Selenide.webdriver;
 
-public class GoToСonstructorTest extends BaseTest {
+public class GoToConstructorTest extends BaseTest {
     MainPage mainPage;
     LoginPage loginPage;
     ProfilePage profilePage;
@@ -46,26 +46,26 @@ public class GoToСonstructorTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Go to Сonstructor from Main Page")
-    @Description("Go to Сonstructor from Main Page before authorization")
-    public void clickСonstructorButtonOnMainPageTest() {
+    @DisplayName("Go to Constructor from Main Page")
+    @Description("Go to Constructor from Main Page before authorization")
+    public void clickConstructorButtonOnMainPageTest() {
         mainPage.clickConstructorOnMainPageButton();
         webdriver().shouldHave(WebDriverConditions.url(MainPage.MAIN_PAGE_URL));
     }
 
     @Test
-    @DisplayName("Go to Сonstructor from Login Page")
-    @Description("Go to Сonstructor from Login Page before authorization")
-    public void clickСonstructorButtonOnLoginPageTest() {
+    @DisplayName("Go to Constructor from Login Page")
+    @Description("Go to Constructor from Login Page before authorization")
+    public void clickConstructorButtonOnLoginPageTest() {
         mainPage.clickLoginToAccountOnMainPageButton();
         loginPage.clickConstructorOnLoginPageButton();
         webdriver().shouldHave(WebDriverConditions.url(MainPage.MAIN_PAGE_URL));
     }
 
     @Test
-    @DisplayName("Go to Сonstructor from Login Page")
-    @Description("Go to Сonstructor from Login Page after authorization")
-    public void clickСonstructorButtonOnLoginAfterAuthorizationPageTest() {
+    @DisplayName("Go to Constructor from Login Page")
+    @Description("Go to Constructor from Login Page after authorization")
+    public void clickConstructorButtonOnLoginAfterAuthorizationPageTest() {
         mainPage.clickLoginToAccountOnMainPageButton();
         loginPage.fillOutLoginForm(userData.getEmail(), userData.getPassword());
         mainPage.clickConstructorOnMainPageButton();
@@ -73,9 +73,9 @@ public class GoToСonstructorTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Go to Сonstructor from Profile Page")
-    @Description("Go to Сonstructor from Profile Page after authorization")
-    public void clickСonstructorButtonOnProfilePageTest() {
+    @DisplayName("Go to Constructor from Profile Page")
+    @Description("Go to Constructor from Profile Page after authorization")
+    public void clickConstructorButtonOnProfilePageTest() {
         mainPage.clickLoginToAccountOnMainPageButton();
         loginPage.fillOutLoginForm(userData.getEmail(), userData.getPassword());
         mainPage.clickPersonalAccountOnMainPageButton();
@@ -84,9 +84,9 @@ public class GoToСonstructorTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Go to Сonstructor from Feed Page")
-    @Description("Go to Сonstructor from Feed Page after authorization")
-    public void clickСonstructorButtonOnFeedPageTest() {
+    @DisplayName("Go to Constructor from Feed Page")
+    @Description("Go to Constructor from Feed Page after authorization")
+    public void clickConstructorButtonOnFeedPageTest() {
         mainPage.clickLoginToAccountOnMainPageButton();
         loginPage.fillOutLoginForm(userData.getEmail(), userData.getPassword());
         mainPage.clickOrderFeedOnMainPageButton();
