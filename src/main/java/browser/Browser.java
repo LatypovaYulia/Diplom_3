@@ -1,5 +1,7 @@
 package browser;
+
 import com.codeborne.selenide.Configuration;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -13,15 +15,16 @@ public class Browser {
         System.out.println("browserProperty = " + browserProperty);
 
         BrowserType browserType = BrowserType.valueOf(browserProperty);
-        switch (browserType){
+        switch (browserType) {
             case CHROME:
+                //указать путь для Chrome драйвера
                 System.setProperty("webdriver.chrome.driver", "C:/WebDriver/bin/chromedriver.exe");
                 Configuration.browser = "CHROME";
                 break;
 
             case YANDEX:
                 //указать путь для Яндекс драйвера
-                System.setProperty("webdriver.chrome.driver", "C:/WebDriver — yandex/bin/yandexdriver.exe");
+                //System.setProperty("webdriver.chrome.driver", "C:/WebDriver — yandex/bin/yandexdriver.exe");
                 Configuration.browser = "CHROME";
                 break;
             default:
